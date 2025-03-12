@@ -1,15 +1,9 @@
 def call() {
-    stage('Install Dependencies') {
-        sh 'npm install'
-        sh 'npm audit fix --force' 
+    stage('Build the Application') {
+        sh 'make build'
     }
 
-    stage('Start App') {
+    stage('Start the Application') {
         sh 'npm start'
     }
-
-    stage('Build React App') {
-        sh 'npm run build'
-    }
 }
-
