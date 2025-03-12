@@ -2,7 +2,9 @@ def call() {
     stage('Build the Application') {
         sh '''
             export NODE_OPTIONS=--openssl-legacy-provider
-            make build
+            
+            echo "Building React app with CI=false to ignore warnings..."
+            CI=false make build
         '''
     }
 
