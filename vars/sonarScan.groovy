@@ -3,11 +3,10 @@ def call(String projectKey) {
         withSonarQubeEnv('sonarQube-Server') {
             withCredentials([string(credentialsId: 'scripted_java_bug', variable: 'SONARQUBE_TOKEN')]) {
                 sh """
-                    sonar-scanner \
+                    mvn clean verify sonar:sonar \
                     -Dsonar.projectKey=${projectKey} \
-                    -Dsonar.sources=. \
-                    -Dsonar.host.url=$SONAR_HOST_URL \
-                    -Dsonar.login=$SONARQUBE_TOKEN
+                    -Dsonar.host.url=http://51.20.74.230:9000 \
+                    -Dsonar.login=${SONARQUBE_TOKEN}
                 """
             }
         }
