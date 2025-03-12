@@ -6,7 +6,7 @@ def call() {
             export NVM_DIR="${NVM_DIR}"
             [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
             nvm use 16
-            export NODE_OPTIONS=--openssl-legacy-provider
+            # Removed NODE_OPTIONS line
             npm install
             npm run build
         """
