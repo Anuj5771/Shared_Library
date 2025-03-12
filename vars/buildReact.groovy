@@ -1,5 +1,5 @@
 def call() {
-    def NVM_DIR = '/var/lib/jenkins/.nvm'  // Absolute path is safer in Jenkins
+    def NVM_DIR = '/var/lib/jenkins/.nvm'
 
     stage('Build the Application') {
         sh """#!/bin/bash
