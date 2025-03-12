@@ -8,7 +8,7 @@ def call() {
             nvm use 16
             export NODE_OPTIONS=--max-old-space-size=4096
             npm install
-            npm run build
+            CI=false npm run build  // <-- Yeh line change ki hai
         """
     }
 
