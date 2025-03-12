@@ -6,7 +6,7 @@ def call() {
             export NVM_DIR="${NVM_DIR}"
             [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
             nvm use 16
-            # Removed NODE_OPTIONS line
+            export NODE_OPTIONS=--max-old-space-size=4096
             npm install
             npm run build
         """
