@@ -1,5 +1,4 @@
 def call() {
-
     node {
         stage('Install Dependencies') {
             sh 'npm install'   
@@ -9,5 +8,4 @@ def call() {
             sh 'npm run build' 
         }
     }
-
 }
