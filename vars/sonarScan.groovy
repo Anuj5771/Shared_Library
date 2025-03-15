@@ -1,7 +1,7 @@
 def call(String projectKey) {
     stage('SonarQube Scan') {
-        withSonarQubeEnv('sonarQube-Server') {
-            withCredentials([string(credentialsId: 'demo', variable: 'SONARQUBE_TOKEN')]) {
+        withSonarQubeEnv('sonar') {
+            withCredentials([string(credentialsId: 'salary', variable: 'SONARQUBE_TOKEN')]) {
                 sh """
                 mvn sonar:sonar \
                 -Dsonar.projectKey=${env.SONAR_PROJECT_KEY} \
