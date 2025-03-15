@@ -1,4 +1,3 @@
-
 def call(String jobName, String buildNumber, String buildUrl) {
 
     def SLACK_CHANNEL = '#jenkinsnotify'
