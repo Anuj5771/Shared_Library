@@ -1,0 +1,8 @@
+- hosts: aws_ec2
+  become: yes
+  tasks:
+    - name: Ensure PostgreSQL is installed
+      apt:
+        name: postgresql
+        state: present
+
