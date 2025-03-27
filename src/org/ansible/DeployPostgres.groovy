@@ -1,7 +1,6 @@
 package org.ansible
-
 class DeployPostgres {
-    static void deploy(script) {
-        script.sh 'ansible-playbook -i inventory.yml playbook.yml'
+    def deploy(pipeline) {
+        pipeline.sh "ansible-playbook -i inventory.ini deploy_postgres.yml"
     }
 }
