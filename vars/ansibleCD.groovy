@@ -1,4 +1,8 @@
-import org.ansible.*
+import org.ansible.CleanWorkspace
+import org.ansible.CloneRepo
+import org.ansible.RunAnsible
+import org.ansible.Notifications
+
 def call(Map params) {
     pipeline {
         agent any
